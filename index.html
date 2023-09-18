@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container-for-both-sides">
+      <div class="side-image">
+        <img src="background.jpg" alt="dummy-image" />
+      </div>
+
+      <div class="side-info">
+        <div class="hero-text">
+          <h1>Unlock Your Journey: Join Us Today!</h1>
+          <h3>
+            Embrace the Future of Connectivity - Join Our Community Today and
+            <br />
+            Thrive !
+          </h3>
+        </div>
+        <div class="get-info-section">
+          <p>Here We go Then :</p>
+          <div>
+            <table>
+              <tr>
+                <td>
+                  <label for="FirstName">FIRST NAME</label><br />
+                  <input type="text" name="FirstName" id="FirstName" required/>
+                </td>
+
+                <td>
+                  <label for="LastName">LAST NAME</label><br />
+                  <input type="text" name="LastName" id="LastName" required/>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="email">EMAIL</label><br>
+                  <input type="email" name="email" id="email" required/>
+                </td>
+
+                <td>
+                  <label for="phonenumber">PHONE NUMBER</label><br>
+                  <input type="tel" name="phonenumber" id="phonenumber" pattern="[0-9]{10}" minlength="10" required/>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="password">PASSWORD</label><br>
+                  <input type="password" name="password" id="password" minlength="13" required/>
+                </td>
+
+                <td>
+                  <label for="confirmPassword">CONFIRM PASSWORD</label><br>
+
+                  <input
+                    type="password"
+                    name="confirmPassword"
+                    id="confirmPassword"
+                    minlength="13"
+                    required
+                  />
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <input type="button" value="Create Account" />
+        <p>
+          Already have an account ? then how about
+          <a href="login.html">log in</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

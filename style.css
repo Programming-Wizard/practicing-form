@@ -1,0 +1,75 @@
+:root {
+  --customPadding: 3.5rem;
+}
+
+body {
+  margin: 0;
+  /* overflow: hidden; */
+}
+
+.container-for-both-sides {
+  display: flex;
+  flex-flow: row;
+}
+
+.side-image > img {
+  width: 32rem;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(186, 186, 186, 0.2);
+  padding: 0 0 0 var(--customPadding);
+}
+
+.hero-text > h1 + h3 {
+  align-items: flex-start;
+}
+
+.side-info {
+  width: 100%;
+}
+
+.get-info-section {
+  padding-left: var(--customPadding);
+}
+
+td {
+  padding: 1rem 5rem 1rem 0rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"]
+{
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(0, 246, 184);
+  border-radius: 4px;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="tel"]:hover
+{
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid blue;
+  border-radius: 4px;
+}
+
+
+input[type="text"]:invalid,
+input[type="email"]:invalid,
+input[type="password"]:invalid,
+input[type="tel"]:invalid
+{
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid red;
+  border-radius: 4px;
+}
