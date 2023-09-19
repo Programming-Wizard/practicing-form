@@ -2,9 +2,37 @@
   --customPadding: 3.5rem;
 }
 
+@font-face {
+  font-family: "CustomHeading";
+  src: url("TheFountainOfWishesRegular-OVxw4.ttf") format("opentype");
+}
+@font-face {
+  font-family: "HeroText";
+  src: url("every-run-font/EveryRunRegular-ZV5pK.ttf") format("opentype");
+}
+
+a:visited {
+  color: crimson;
+}
+a:link {
+  color: cadetblue;
+}
+a:hover{
+  color: white;
+}
+
+h1 {
+  font-family: "CustomHeading";
+  font-size: 50px;
+}
+
+h3 {
+  font-family: "Herotext";
+}
+
 body {
   margin: 0;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .container-for-both-sides {
@@ -33,6 +61,15 @@ body {
 
 .get-info-section {
   padding-left: var(--customPadding);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.6rem;
+}
+
+table label {
+  font-size: 12px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 500;
 }
 
 td {
@@ -42,8 +79,7 @@ td {
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="tel"]
-{
+input[type="tel"] {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
@@ -54,22 +90,62 @@ input[type="tel"]
 input[type="text"]:hover,
 input[type="email"]:hover,
 input[type="password"]:hover,
-input[type="tel"]:hover
-{
+input[type="tel"]:hover {
   width: 100%;
   margin-bottom: 10px;
-  border: 1px solid blue;
+  border-color: blue;
   border-radius: 4px;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
 }
-
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
+}
 
 input[type="text"]:invalid,
 input[type="email"]:invalid,
 input[type="password"]:invalid,
-input[type="tel"]:invalid
-{
+input[type="tel"]:invalid {
   width: 100%;
   margin-bottom: 10px;
   border: 1px solid red;
   border-radius: 4px;
+}
+
+.side-info > p {
+  padding-left: var(--customPadding);
+}
+
+input[type="button"] {
+  height: 40px;
+  width: 180px;
+  border: 0 hidden;
+  background-color: rgb(93, 93, 226);
+  border-radius: 5px;
+  margin-left: var(--customPadding);
+  margin-bottom: 1em;
+  font-weight: bold;
+  color: white;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+input[type="button"]:hover {
+  height: 40px;
+  width: 180px;
+  border: 0 hidden;
+  background-color: rgb(93, 93, 226);
+  border-radius: 5px;
+  margin-left: var(--customPadding);
+  margin-bottom: 1em;
+  font-weight: bold;
+  color: white;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
