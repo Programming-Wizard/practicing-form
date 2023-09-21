@@ -1,7 +1,6 @@
 :root {
-  --customPadding: 3.5rem;
+  --customPadding: 0px;
 }
-
 @font-face {
   font-family: "CustomHeading";
   src: url("TheFountainOfWishesRegular-OVxw4.ttf") format("opentype");
@@ -11,87 +10,79 @@
   src: url("every-run-font/EveryRunRegular-ZV5pK.ttf") format("opentype");
 }
 
-a:visited {
-  color: crimson;
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-a:link {
-  color: cadetblue;
+main {
+  margin: 0px;
+  padding: 0px;
 }
-a:hover {
-  color: white;
+.container-for-both-sides {
+  max-width: 100%;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
-  font-family: "CustomHeading";
-  font-size: 50px;
+  font-family: CustomHeading;
 }
 
 h3 {
-  font-family: "Herotext";
-}
-
-body {
-  margin: 0;
-  overflow: hidden;
-}
-
-.container-for-both-sides {
-  display: flex;
-  flex-flow: row;
+  font-family: Herotext;
 }
 
 .side-image {
   position: relative;
-}
-
-.bg-for-logo {
-  position: absolute;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.7);
-  width: 50%;
-  height: 25%;
-  align-items: center;
-  align-content: center;
-  padding: 0px 25% 0% 25%;
-  margin: 30% 0 0 0%;
+  text-align: center;
 }
 
 .side-image .overlaped-image {
-  align-self: center;
-  position: relative;
-  bottom: 10%;
+  display: inline-flex;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  margin-top: 2em;
+  padding: 0px 17.6% 0px 17.4%;
+  max-width: 65%;
 }
 
-.side-image > img {
-  width: 32rem;
-}
-
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(186, 186, 186, 0.2);
-  padding: 0 0 0 var(--customPadding);
-}
-
-.hero-text > h1 + h3 {
-  align-items: flex-start;
+.side-image > .bg {
+  justify-content: center;
+  width: 100%;
+  height: 23em;
 }
 
 .side-info {
-  width: 100%;
+  display: flex;
+  max-width: inherit;
+  width: inherit;
+  flex-direction: column;
 }
-
 .get-info-section {
   padding-left: var(--customPadding);
   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 1.6rem;
 }
 
+table {
+  padding-left: 15%;
+}
 table label {
   font-size: 12px;
+  text-wrap: nowrap;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 td {
@@ -172,35 +163,58 @@ input[type="button"]:hover {
   transform: scale(1.1);
 }
 
-@media (max-width: 1102px) {
-  body {
-    overflow: scroll;
+input[type="button"] {
+  align-self: center;
+}
+
+@media (max-width: 360px) {
+  table label {
+    font-size: 8px;
+    font-weight: bolder;
   }
 }
 
-@media (max-width: 1010px) {
+@media (min-width: 768px) {
+  body {
+    overflow: hidden;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    justify-content: unset;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
   .container-for-both-sides {
-    flex-flow: column;
+    flex-direction: row;
   }
-  .side-image > img {
-    width: 23rem;
-    height: 20rem;
+  .side-image > .bg {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    display: flex;
+    align-self: flex-start;
   }
-  .overlaped-image {
-    align-self: center;
-    position: relative;
-    width: 15rem;
-    margin-top: -2.5em;
+  .side-info {
+    margin-top: 3em;
+    margin-left: 3em;
+    width: 100%;
   }
-  .bg-for-logo {
-    position: absolute;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 19.65em;
-    height: 8em;
-    align-items: center;
-    align-content: center;
-    padding: 0% 0% 0% 15%;
-    margin: 15% 0% 0 0%;
+
+  .side-image > .overlaped-image {
+    top: 10%;
+    padding: 0px;
+    display: flex;
+    align-self: flex-start;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 440px) {
+  .side-image > .overlaped-image {
+    top: 20%;
+    padding: 0px 35% 0px 35%;
+    align-self: flex-start;
+    max-width: 40%;
   }
 }
